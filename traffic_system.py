@@ -198,4 +198,3 @@ if st.session_state.run:
 if not st.session_state.run:
     for cap in caps.values():
         cap.release()
-while st.session_state.run:
