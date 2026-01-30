@@ -1,11 +1,11 @@
+import os
+os.environ["OPENCV_VIDEOIO_PRIORITY_MSMF"] = "0"
+os.environ["QT_QPA_PLATFORM"] = "offscreen"
+
 import streamlit as st
 import cv2
 from ultralytics import YOLO
 import time
-import os
-
-os.environ["OPENCV_VIDEOIO_PRIORITY_MSMF"] = "0"
-
 # ---------------- PAGE SETUP ----------------
 st.set_page_config(layout="wide")
 st.title("🚦 Intelligent Traffic Management System 🚦")
@@ -193,3 +193,4 @@ if st.session_state.run:
 if not st.session_state.run:
     for cap in caps.values():
         cap.release()
+
